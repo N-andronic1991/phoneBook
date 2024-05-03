@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 300px;
+  height: fit-content;
+  padding: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.field {
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.submitBtn {
+  display: block;
+  width: 100%;
+}
+.error {
+  display: block;
+  font-size: 10px;
+  color: rgb(227, 101, 101);
+}
+
+.wrapper {
+  margin-bottom: 10px;
+}
