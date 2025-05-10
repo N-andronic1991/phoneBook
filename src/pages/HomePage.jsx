@@ -18,6 +18,7 @@ const HomePage = () => {
     },
     description: {
       fontSize: 16,
+      textAlign: 'justify',
     },
   };
 

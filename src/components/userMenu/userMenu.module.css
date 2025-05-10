@@ -5,6 +5,7 @@
 }
 
 .username {
+  font-family: var(--font-title);
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
 }
