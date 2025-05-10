@@ -16,7 +16,7 @@ import { apiGetContacts } from '../redux/contacts/operations';
 import DocumentTitle from '../components/DocumentTitle';
 
 const styles = {
-  title: { fontWeight: 500, fontSize: 24, textAlign: 'center' },
+  title: { fontWeight: 600, fontSize: 32, textAlign: 'center' },
   wrapper: {
     display: 'flex',
     justifyContent: 'spaceBetween',
