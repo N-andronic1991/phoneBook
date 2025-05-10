@@ -16,17 +16,14 @@ const SearchBox = () => {
   };
   return (
     <div className={css.searchBox}>
-      <label>
-        Find contacts by name or number:
-        <input
-          className={css.searchInput}
-          type="text"
-          name="nameSearch"
-          value={filterName || filterNumber}
-          onChange={onChangeFilter}
-          placeholder="Search..."
-        />
-      </label>
+      <input
+        className={css.searchInput}
+        type="text"
+        name="nameSearch"
+        value={filterName || filterNumber}
+        onChange={onChangeFilter}
+        placeholder=" Search contacts by name or number"
+      />
     </div>
   );
 };

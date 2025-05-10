@@ -4,7 +4,7 @@ import ContactList from '../components/contactList/ContactList';
 import Loader from '../components/loader/Loader';
 import ErrorMessage from '../components/errorMessage/ErrorMessage';
 import { Toaster } from 'react-hot-toast';
-
+import Container from '../components/container/Container';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   selectLoading,
@@ -16,7 +16,13 @@ import { apiGetContacts } from '../redux/contacts/operations';
 import DocumentTitle from '../components/DocumentTitle';
 
 const styles = {
-  title: { fontWeight: 600, fontSize: 32, textAlign: 'center' },
+  title: {
+    marginBottom: '20px',
+    fontWeight: 600,
+    fontSize: 32,
+    textAlign: 'center',
+    color: 'var(--main-title-text-color)',
+  },
   wrapper: {
     display: 'flex',
     justifyContent: 'spaceBetween',
@@ -37,27 +43,27 @@ const ContactsPage = () => {
   return (
     <>
       <DocumentTitle>Contacts</DocumentTitle>
-
-      <h1 style={styles.title}>Phonebook</h1>
-      <div style={styles.wrapper}>
+      <Container>
+        <h1 style={styles.title}>Phonebook</h1>
+        {Array.isArray(contacts) && contacts.length > 0 && <SearchBox />}
         <ContactForm />
-        <SearchBox />
-      </div>
-      <Toaster
-        position="bottom-center"
-        toastOptions={{
-          className: '',
-          duration: 2000,
-          style: {
-            background: 'green',
-            color: '#fff',
-          },
-        }}
-      />
-      {loading && <Loader />}
-      {error && <ErrorMessage />}
 
-      {Array.isArray(contacts) && <ContactList />}
+        <Toaster
+          position="bottom-center"
+          toastOptions={{
+            className: '',
+            duration: 2000,
+            style: {
+              background: 'green',
+              color: '#fff',
+            },
+          }}
+        />
+        {loading && <Loader />}
+        {error && <ErrorMessage />}
+
+        {Array.isArray(contacts) && <ContactList />}
+      </Container>
     </>
   );
 };

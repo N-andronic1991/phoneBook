@@ -1,23 +1,23 @@
 .form {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 300px;
+  margin: 20px auto 30px auto;
+  max-width: 300px;
   height: fit-content;
   padding: 10px;
-  border: 1px solid #4b0350;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--form-shadow);
 }
 
 .label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
 }
 
 .field {
   display: block;
   padding: 8px;
+  margin-top: 8px;
   border-radius: 4px;
   outline: none;
 }
@@ -27,11 +27,9 @@
   width: 100%;
 }
 .error {
-  display: block;
-  font-size: 10px;
-  color: rgb(227, 101, 101);
+  color: var(--error-color);
 }
 
 .wrapper {
-  margin-bottom: 10px;
+  min-height: 80px;
 }

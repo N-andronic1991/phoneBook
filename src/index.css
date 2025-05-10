@@ -1,12 +1,45 @@
 @import-normalize; /* bring in normalize.css styles */
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Regular-webfont.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Bold-webfont.woff') format('woff');
+  font-weight: 700;
+}
 
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url('./assets/fonts/RobotoSlab-Bold-webfont.woff') format('woff');
+  font-weight: 700;
+}
+
+:root {
+  --font-text: 'Roboto', sans-serif;
+  --font-title: 'RobotoSlab', sans-serif;
+  --main-title-text-color: #212121;
+  --primary-text-color: #262525;
+  --bgd-color: #f5f4fa;
+  --error-color: rgb(227, 101, 101);
+  --accent-color: #2196f3;
+  --border-color: #ececec;
+  --form-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --btn-bgd-active: #188ce8;
+  --input-border-color: rgba(117, 117, 117, 0.5);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: var(--font-text);
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.5px;
-  background-color: #f6ffff;
+  color: var(--primary-text-color);
+  background-color: var(--bgd-color);
 }
 
 h1,
@@ -28,7 +61,7 @@ ol {
 
 img {
   display: block;
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -44,23 +77,26 @@ ul {
 
 button {
   width: fit-content;
-  padding: 4px;
+  padding: 8px;
   font-family: inherit;
   font-size: inherit;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.03em;
   cursor: pointer;
-  border-radius: 4px;
-  background-color: rgb(219, 138, 230);
-  border: 1px solid rgb(118, 21, 107);
+  border-radius: 8px;
+  color: var(--main-title-text-color);
+  background-color: var(--accent-color);
+  border: 1px solid var(--btn-bgd-active);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 
 button:hover {
-  background-color: rgb(114, 10, 115);
+  background-color: var(--btn-bgd-active);
 }
 
 input:hover,
 input:focus {
-  border: 2px solid rgb(211, 115, 224);
+  border: 2px solid var(--border-color);
 }

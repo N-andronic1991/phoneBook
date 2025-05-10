@@ -1,24 +1,23 @@
 import DocumentTitle from '../components/DocumentTitle';
+import Container from '../components/container/Container';
 const HomePage = () => {
   const styles = {
-    container: {
-      minHeight: 'calc(100vh - 50px)',
-      margin: '0 auto',
-      padding: '100px 40px 40px 40px',
-    },
     title: {
-      fontWeight: 500,
-      fontSize: 48,
+      fontFamily: 'RobotoSlab',
+      fontWeight: 700,
+      fontSize: 32,
       textAlign: 'center',
       marginBottom: '20px',
+      color: 'var(--main-title-text-color)',
     },
     text: {
-      fontSize: 24,
+      fontSize: 18,
       marginBottom: '20px',
       textAlign: 'center',
+      color: 'var(--main-title-text-color)',
     },
     description: {
-      fontSize: 18,
+      fontSize: 16,
     },
   };
 
@@ -26,7 +25,7 @@ const HomePage = () => {
     <>
       <DocumentTitle>Home</DocumentTitle>
 
-      <div style={styles.container}>
+      <Container>
         <h1 style={styles.title}>
           Welcome to Phonebook App
           <span role="img" aria-label="Greeting icon">
@@ -45,7 +44,7 @@ const HomePage = () => {
           friends, family, or business connections, the PhoneBook App makes it
           easy to stay connected.
         </p>
-      </div>
+      </Container>
     </>
   );
 };

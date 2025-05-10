@@ -1,12 +1,18 @@
 .searchBox {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .searchInput {
-  display: block;
-  width: 180px;
+  min-width: 250px;
   padding: 8px;
   margin-top: 5px;
-  border-radius: 4px;
-  border: 1px solid cadetblue;
+  border-radius: 8px;
+  border: 2px solid var(--input-border-color);
+  outline: none;
+}
+
+.searchInput:hover,
+.searchInput:focus {
+  border-color: var(--btn-bgd-active);
 }

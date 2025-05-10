@@ -2,9 +2,9 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 15px;
 }
 
 .item {
-  flex-basis: calc((100% - 10px) / 3);
+  min-width: 250px;
 }
